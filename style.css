@@ -5,7 +5,15 @@
     overflow-x: hidden;
 }
 
+:root {
+    --corDeFundo: #BF520A;
+}
+
 /* ----->MENU HAMBURGUER<----- */
+
+body {
+    background-color: var(--corDeFundo) ;
+}
 
 /* estilizando o menu hamburguer */
 .mobile-menu {
@@ -13,7 +21,7 @@
     top: 12px;
     left: 50px;
     cursor: pointer;
-    background-color: orangered;
+    background-color: var(--corDeFundo);
     padding: 5px;
     border-radius: 15px;
     z-index: 100;
@@ -35,16 +43,17 @@
     position: absolute;
     top: 8vh;
     right: left;
-    width: 15vw;
-    height: 30vh;
+    width: 385px;
+    height: 634px;
     border-radius: 0 20px 20px 0;
-    background: orangered;
+    background: var(--corDeFundo);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in;
     z-index: 100;
+    overflow: hidden;
 }
   
 /* mais configurações para as fontes */
@@ -128,7 +137,7 @@
 
 /* div aonde engloba todos os textos e botões da home */
 .home .textContent {
-    position: relative;
+    position: absolute;
     top: 212px;
     left: 100px;
 }
@@ -142,7 +151,7 @@
 
 /* letra v no meio da logo */
 .homeLogo span {
-    color: orangered;
+    color: var(--corDeFundo);
 }
 
 /* titulo breve */
@@ -166,13 +175,13 @@
     margin-top: 25px;
     height: 50px;
     width: 254px;
-    background-color: orangered;
+    background-color: var(--corDeFundo);
     color: #fff;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     font-size: 32px;
-    margin-bottom: 206px;
+    bottom: 206px;
 }
 
 /* atibuindo espaço do segundo botão pro primeiro */
@@ -196,14 +205,14 @@
     width: 100%;
     height: 800px;
     overflow-y: hidden;
-    background-color: orangered;
+    background-color: var(--corDeFundo);
 }
 
 .aboutUs .textContent {
     position: relative;
     float: left;
     top: 100px;
-    left: 110px;
+    left: 210px;
 }
 
 .aboutUsTitle {
@@ -224,7 +233,29 @@
     height: 892px;
     width: 637px;
     float: left;
-    right: 0;
+    right: 210px;
     bottom: 0;
-    z-index: 100;
+}
+
+@media only screen and (max-width: 1256px) {
+    .home {
+        width: 100%;
+        height: 800px;
+    }
+
+    .aboutUs {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutUs .textContent {
+        margin: auto;
+        left: 0;
+        top: 0;
+    }
+
+    #waiterImg {
+        visibility: hidden;
+    }
 }
