@@ -1,0 +1,230 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ----->MENU HAMBURGUER<----- */
+
+/* estilizando o menu hamburguer */
+.mobile-menu {
+    position: absolute;
+    top: 12px;
+    left: 50px;
+    cursor: pointer;
+    background-color: orangered;
+    padding: 5px;
+    border-radius: 15px;
+    z-index: 100;
+}
+  
+/* estilizando todas as divs dentro do menu */
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* estilizando a lista aonde ficará os links */
+.nav-list {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top: 8vh;
+    right: left;
+    width: 15vw;
+    height: 30vh;
+    border-radius: 0 20px 20px 0;
+    background: orangered;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    z-index: 100;
+}
+  
+/* mais configurações para as fontes */
+.nav-list li {
+    margin-left: 0;
+    letter-spacing: 3px;
+    margin: auto;
+    opacity: 0;
+}
+
+/* estlizando o titulo serveur dentro do menu */
+.nav-list li:first-child {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: serif;
+}
+
+/* links do menu */
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+/* função hover dos links do menu */
+.nav-list li a:hover {
+    opacity: 0.7;
+}
+  
+/* linha branca traçada embaixo de cada link */
+.line {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+}
+
+/* trazendo a caixa contendo os links para a posição inicial (0) */
+.nav-list.active {
+    transform: translateX(0);
+}
+ 
+/* keyframe de animação para trazer a caixa */
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+/* estilizando o menu hamburguer para, quando clicado, mudar a posição das linhas formando um x */
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+  
+/* ----->FIM DO MENU HAMBURGUER<----- */
+
+/* ----->HOME PAGE<----- */
+
+/* estilizando a seção home */
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url(image/home-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* div aonde engloba todos os textos e botões da home */
+.home .textContent {
+    position: relative;
+    top: 212px;
+    left: 100px;
+}
+
+/* logo */
+.homeLogo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 61px;
+}
+
+/* letra v no meio da logo */
+.homeLogo span {
+    color: orangered;
+}
+
+/* titulo breve */
+.homeTitle {
+    margin-top: 42px;
+    font-size: 80px;
+    color: #fff;
+    width: 795px;
+}
+
+/* descrição breve */
+.homeDesc {
+    margin-top: 7px;
+    color: #fff;
+    font-size: 30px;
+    width: 655px;
+}
+
+/* botões freelancer e empresas */
+.homeBtn {
+    margin-top: 25px;
+    height: 50px;
+    width: 254px;
+    background-color: orangered;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    margin-bottom: 206px;
+}
+
+/* atibuindo espaço do segundo botão pro primeiro */
+.homeBtn:last-child {
+    margin-left: 25px;
+
+}
+
+/* atriubuindo uma borda na função hover do botão */
+.homeBtn:hover {
+    border: 1px solid #000;
+}
+
+/* ----->FIM DA HOME<----- */
+
+/* ----->INICIO DA SOBRE NÓS<----- */
+
+/* estilizando a seção */
+.aboutUs {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow-y: hidden;
+    background-color: orangered;
+}
+
+.aboutUs .textContent {
+    position: relative;
+    float: left;
+    top: 100px;
+    left: 110px;
+}
+
+.aboutUsTitle {
+    font-size: 80px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 58px;
+}
+
+.aboutUsDesc {
+    font-size: 48px;
+    color: #fff;
+    width: 631px;
+}
+
+#waiterImg {
+    position: absolute;
+    height: 892px;
+    width: 637px;
+    float: left;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
