@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
 /* CSS reset */
 * {
     margin: 0;
@@ -7,13 +9,13 @@
 
 :root {
     --corDeFundo: #BF520A;
+    --fonte: 'Alata', sans-serif;
 }
-
-/* ----->MENU HAMBURGUER<----- */
 
 body {
-    background-color: var(--corDeFundo) ;
+    background-color: var(--corDeFundo);
 }
+
 
 /* estilizando o menu hamburguer */
 .mobile-menu {
@@ -69,6 +71,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-family: serif;
+    font-size: 25px;
 }
 
 /* links do menu */
@@ -76,6 +79,8 @@ body {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
+    font-family: var(--fonte);
+    font-size: 22px;
 }
   
 /* função hover dos links do menu */
@@ -120,142 +125,248 @@ body {
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
+
+/* ----> Logo para mobile <---- */
+.navLogo {
+    display: none;
+}
   
 /* ----->FIM DO MENU HAMBURGUER<----- */
 
-/* ----->HOME PAGE<----- */
+/* ----> HOME <---- */
 
-/* estilizando a seção home */
+/* configurando a home com uma plano de fundo */
 .home {
-    width: 100%;
-    height: 100vh;
-    background: url(image/home-img.png);
+    height: 917px;
+    background-image: url(image/home-img.png);
     background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-/* div aonde engloba todos os textos e botões da home */
-.home .textContent {
-    position: absolute;
-    top: 212px;
-    left: 100px;
+    background-position: center;
 }
 
 /* logo */
 .homeLogo {
+    display: flex;
+    margin-top: 212px;
+    margin-left: 100px;
+    font-size: 61px;
     color: #fff;
     text-transform: uppercase;
-    font-size: 61px;
 }
 
-/* letra v no meio da logo */
-.homeLogo span {
+/* v alaranjado da home */
+.home span {
     color: var(--corDeFundo);
 }
 
-/* titulo breve */
+/* titulo da pagina inicial */
 .homeTitle {
-    margin-top: 42px;
+    display: flex;
+    margin-top: 24px;
+    margin-left: 100px;
     font-size: 80px;
     color: #fff;
-    width: 795px;
+    max-width: 795px;
+    font-family: var(--fonte);
 }
 
-/* descrição breve */
+/* descrição da home */
 .homeDesc {
-    margin-top: 7px;
+    display: flex;
+    margin-top: 14px;
+    margin-left: 100px;
     color: #fff;
+    max-width: 655px;
     font-size: 30px;
-    width: 655px;
+    font-family: var(--fonte);
 }
 
-/* botões freelancer e empresas */
-.homeBtn {
-    margin-top: 25px;
+/* primeiro botão "empresas" */
+.first {
+    margin-left: 100px;
+    margin-right: 25px;
+}
+
+/* configurando os dois botões */
+a input {
     height: 50px;
     width: 254px;
-    background-color: var(--corDeFundo);
-    color: #fff;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
     font-size: 32px;
-    bottom: 206px;
-}
-
-/* atibuindo espaço do segundo botão pro primeiro */
-.homeBtn:last-child {
-    margin-left: 25px;
-
-}
-
-/* atriubuindo uma borda na função hover do botão */
-.homeBtn:hover {
-    border: 1px solid #000;
-}
-
-/* ----->FIM DA HOME<----- */
-
-/* ----->INICIO DA SOBRE NÓS<----- */
-
-/* estilizando a seção */
-.aboutUs {
-    position: relative;
-    width: 100%;
-    height: 800px;
-    overflow-y: hidden;
+    margin-top: 25px;
+    color: #fff;
     background-color: var(--corDeFundo);
+    border: none;
+    border-radius: 20px;
 }
 
-.aboutUs .textContent {
-    position: relative;
-    float: left;
-    top: 100px;
-    left: 210px;
-}
+/* ---->FIM HOME<---- */
 
+
+/* ---->INÍCIO SOBRE NÓS<---- */
+
+/* texto sobre nos */
 .aboutUsTitle {
+    display: flex;
+    margin-left: 110px;
+    margin-top: 100px;
     font-size: 80px;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 58px;
+    font-family: var(--fonte);
 }
 
+/* descrição da area sobre nos */ 
 .aboutUsDesc {
-    font-size: 48px;
+    display: flex;
+    margin-left: 110px;
+    margin-top: 25px;
     color: #fff;
-    width: 631px;
+    font-size: 48px;
+    max-width: 631px;
+    font-family: var(--fonte);
+    z-index: 5612;
 }
 
+/* ----> imagem do GARÇOM <---- */
 #waiterImg {
     position: absolute;
-    height: 892px;
-    width: 637px;
-    float: left;
-    right: 210px;
-    bottom: 0;
+    right: 0;
+    top: 825px;
 }
 
-@media only screen and (max-width: 1256px) {
-    .home {
-        width: 100%;
-        height: 800px;
+
+/* ----> FMI SOBRE NÓS <---- */
+
+/* visualização mobile */
+@media only screen and (max-width: 768px) {
+    .homeLogo {
+        display: none;
+        height: auto;
+    }
+
+    .homeTitle {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 60px;
+        margin-top: 150px;
+    }
+    
+    .homeDesc {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 34px;
+    }
+    
+    a input {
+        display: block;
+        margin: auto;
+        height: 50px;
+        width: 70%;
+        font-size: 32px;
+        color: #fff;
+        background-color: var(--corDeFundo);
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+
+    .home a {
+        text-decoration: none;
+    }
+
+    .navLogo {
+        display: block;
+        position: absolute;
+        color: #fff;
+        top: 10px;
+        right: 30px;
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+    
+    .navLogo span {
+        color: #BF520A;   
+    }
+    
+    #waiterImg {
+        display: none;        
     }
 
     .aboutUs {
-        display: flex;
-        align-items: center;
-        text-align: center;
+        margin-left: 0;
     }
 
-    .aboutUs .textContent {
-        margin: auto;
-        left: 0;
-        top: 0;
+    .aboutUsTitle {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .aboutUsDesc {
+        display: block;
+        margin: 30px auto 0 auto;
+        max-width: auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .homeTitle {
+        font-size: 40px;
+    }
+
+    .homeDesc {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .aboutUs {
+        height: 500px;
+    }
+
+    .aboutUsTitle {
+        font-size: 50px;
+    }
+    
+    .aboutUsDesc {
+        font-size: 28px;
+    }
+
+    .mobile-menu {
+        left: 25px;
+    }
+    
+    .navLogo {
+        font-size: 22px;
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width: 1188px) {
+    .homeLogo {
+        margin-top: 170px;
+    }
+
+    .aboutUs {
+        height: 800px;
     }
 
     #waiterImg {
-        visibility: hidden;
+        display: none;
+    }
+
+    .aboutUsTitle {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .aboutUsDesc {
+        display: block;
+        margin: 30px auto 0 auto;
+        max-width: 800px;
+        text-align: center;
+
     }
 }
