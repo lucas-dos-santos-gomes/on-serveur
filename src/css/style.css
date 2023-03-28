@@ -138,7 +138,7 @@ body {
 /* configurando a home com uma plano de fundo */
 .home {
     height: 917px;
-    background-image: url(image/home-img.png);
+    background-image: url(../img/home-img.png);
     background-size: cover;
     background-position: center;
 }
@@ -167,6 +167,7 @@ body {
     color: #fff;
     max-width: 795px;
     font-family: var(--fonte);
+    /*-webkit-text-stroke: 3px #000;*/
 }
 
 /* descrição da home */
