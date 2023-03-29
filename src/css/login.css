@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Alata', sans-serif;
+    color: #fff;
+}
+.modalContainer1, .modalContainer2{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    padding-top: 60px;
+    z-index: 999;
+    justify-content: center;
+    backdrop-filter: blur(15px);  
+}
+.modal1, .modal2{
+    background-image: url('../img/fundo.png');
+    background-size: cover;
+    width: 320px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+    border-radius: 10px;  
+}
+.active{
+    display: flex;
+    animation: modal 0.5s;
+}
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(-500px,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+.btnClose{
+    margin-left: 280px;
+    margin-top: 5px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    cursor: pointer;
+}
+.btnClose img{
+    width: 30px;
+    height: 30px;
+}
+#logoUsuario{
+    width: 90px;
+    height: 90px;
+}
+p > a{
+    color: #676767;
+    font-weight: bold;
+    text-decoration: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input{
+    width: 150px;
+    height: 35px;
+    border-radius: 50px;
+    border: 1px solid #890019;
+    margin-top: 10px;
+    color: #676767;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 50px;
+}
+#btnSenha{
+    background: url('../img/inputSenha.png') no-repeat;
+    background-size: cover;
+}
+#btnUsuario{
+    background: url('../img/inputUsuario.png') no-repeat;
+    background-size: cover;
+}
+form button{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    transition: .6s ease;
+    padding-left: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('../img/iconeEntrar.png') no-repeat;
+    background-size: contain;
+}
+form button:hover{
+    background-color: #890019;
+    color: #fff;
+    border-color: #890019;
+}
+input:focus, form button:focus{
+    border: 1px solid #fff;
+    box-shadow: 0;
+    outline: 0;
+}
+#opcoesLogin p{
+    margin-bottom: 15px;
+    padding: 0 5px;
+    border-radius: 10px;
+    background-color: #53030C;
+}
+#opcoesLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+#opcoesLogin img{
+    width: 200px;
+    height: 46px;
+}
+
+
