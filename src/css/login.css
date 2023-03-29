@@ -15,7 +15,7 @@
     padding-top: 60px;
     z-index: 999;
     justify-content: center;
-    backdrop-filter: blur(15px);  
+    backdrop-filter: blur(6px);  
 }
 .modal1, .modal2{
     background-image: url('../img/fundo.png');
@@ -30,7 +30,8 @@
 }
 .active{
     display: flex;
-    animation: modal 0.5s;
+    animation: modal .3s;
+    
 }
 @keyframes modal {
     from{

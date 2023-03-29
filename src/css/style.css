@@ -96,7 +96,7 @@ body {
 }
 
 /* trazendo a caixa contendo os links para a posição inicial (0) */
-.nav-list.active {
+.nav-list.ativo {
     transform: translateX(0);
 }
  
@@ -114,15 +114,15 @@ body {
 }
   
 /* estilizando o menu hamburguer para, quando clicado, mudar a posição das linhas formando um x */
-.mobile-menu.active .line1 {
+.mobile-menu.ativo .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
 }
   
-.mobile-menu.active .line2 {
+.mobile-menu.ativo .line2 {
     opacity: 0;
 }
   
-.mobile-menu.active .line3 {
+.mobile-menu.ativo .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
 

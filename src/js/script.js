@@ -3,7 +3,7 @@ class MobileNavbar {
       this.mobileMenu = document.querySelector(mobileMenu);
       this.navList = document.querySelector(navList);
       this.navLinks = document.querySelectorAll(navLinks);
-      this.activeClass = "active";
+      this.ativoClass = "ativo";
   
       this.handleClick = this.handleClick.bind(this);
     }
@@ -19,8 +19,8 @@ class MobileNavbar {
     }
   
     handleClick() {
-      this.navList.classList.toggle(this.activeClass);
-      this.mobileMenu.classList.toggle(this.activeClass);
+      this.navList.classList.toggle(this.ativoClass);
+      this.mobileMenu.classList.toggle(this.ativoClass);
       this.animateLinks();
     }
   
