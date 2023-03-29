@@ -31,7 +31,6 @@
 .active{
     display: flex;
     animation: modal .3s;
-    
 }
 @keyframes modal {
     from{
