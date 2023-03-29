@@ -8,7 +8,8 @@
 }
 
 :root {
-    --corDeFundo: #BF520A;
+    --corDeFundo: #5A071F;
+    --corBotao: #421C29;
     --fonte: 'Alata', sans-serif;
 }
 
@@ -181,34 +182,100 @@ body {
     font-family: var(--fonte);
 }
 
-/* primeiro botão "empresas" */
-.first {
-    margin-left: 100px;
+/* adicionando botões de empresas e freelancer */
+button {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* estilizando a distancia do primeiro botão */
+#first {
+    margin-left: 102px;
     margin-right: 25px;
 }
 
-/* configurando os dois botões */
-a input {
-    height: 50px;
+/* estilizando o botão em si */
+.custom-btn {
     width: 254px;
-    font-size: 32px;
-    margin-top: 25px;
+    height: 50px;
     color: #fff;
-    background-color: var(--corDeFundo);
-    border: none;
     border-radius: 20px;
+    border: 1px solid #000;
+    font-family: var(--fonte);
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
 }
 
+/* como no CodePenn havia mais exemplares, este é o botão 11. aqui abaixo está a sua estilização */
+.btn-11 {
+    background: rgb(66, 28, 41);
+    color: #fff;
+    overflow: hidden;
+}
+
+/* função hover do botão */
+.btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+    opacity: .7;
+}
+
+/* flash que passa entre os botões */
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+/* quando deixar o mouse sobre o botão, gerar sombreamento no botão */
+.btn-11:active {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3), -4px -4px 6px 0 rgba(116, 125, 136, .2), inset -4px -4px 6px 0 rgba(255,255,255,.2),inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+/* função de animação com o flash do botão  */
+@-webkit-keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg); opacity: 0; 
+    }
+
+    80% { 
+        -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; 
+    }
+
+    81% { 
+        -webkit-transform: scale(4) rotate(45deg); opacity: 1; 
+    }
+    100% { 
+        -webkit-transform: scale(50) rotate(45deg); opacity: 0; 
+    }
+}
 /* ---->FIM HOME<---- */
 
 
 /* ---->INÍCIO SOBRE NÓS<---- */
+.aboutUs {
+    height: 800px;
+}
+
 
 /* texto sobre nos */
 .aboutUsTitle {
     display: flex;
     margin-left: 110px;
-    margin-top: 100px;
+    margin-top: 180px;
     font-size: 80px;
     color: #fff;
     text-transform: uppercase;
@@ -368,6 +435,11 @@ a input {
         margin: 30px auto 0 auto;
         max-width: 800px;
         text-align: center;
-
     }
 }
+
+    @media only screen and (max-width: 1340px) {
+        .homeLogo {
+            margin-top: 140px;
+        }
+    }
