@@ -47,7 +47,7 @@ body {
     top: 8vh;
     right: left;
     width: 385px;
-    height: 634px;
+    height: 90vh;
     border-radius: 0 20px 20px 0;
     background: var(--corDeFundo);
     flex-direction: column;
@@ -138,7 +138,7 @@ body {
 
 /* configurando a home com uma plano de fundo */
 .home {
-    height: 917px;
+    height: 768px;
     background-image: url(../img/home-img.png);
     background-size: cover;
     background-position: center;
@@ -147,9 +147,9 @@ body {
 /* logo */
 .homeLogo {
     display: flex;
-    margin-top: 212px;
+    margin-top: 100px;
     margin-left: 100px;
-    font-size: 61px;
+    font-size: 42px;
     color: #fff;
     text-transform: uppercase;
 }
@@ -162,9 +162,9 @@ body {
 /* titulo da pagina inicial */
 .homeTitle {
     display: flex;
-    margin-top: 24px;
+    margin-top: 12px;
     margin-left: 100px;
-    font-size: 80px;
+    font-size: 60px;
     color: #fff;
     max-width: 795px;
     font-family: var(--fonte);
@@ -178,7 +178,7 @@ body {
     margin-left: 100px;
     color: #fff;
     max-width: 655px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: var(--fonte);
 }
 
@@ -267,16 +267,15 @@ button {
 
 /* ---->INÍCIO SOBRE NÓS<---- */
 .aboutUs {
-    height: 800px;
+    height: 450px;
 }
-
 
 /* texto sobre nos */
 .aboutUsTitle {
     display: flex;
     margin-left: 110px;
-    margin-top: 180px;
-    font-size: 80px;
+    margin-top: 70px;
+    font-size: 55px;
     color: #fff;
     text-transform: uppercase;
     font-family: var(--fonte);
@@ -288,17 +287,17 @@ button {
     margin-left: 110px;
     margin-top: 25px;
     color: #fff;
-    font-size: 48px;
+    font-size: 35px;
     max-width: 631px;
     font-family: var(--fonte);
-    z-index: 5612;
 }
 
 /* ----> imagem do GARÇOM <---- */
 #waiterImg {
     position: absolute;
     right: 0;
-    top: 825px;
+    height: 550px;
+    top: 670px;
 }
 
 
@@ -308,52 +307,50 @@ button {
 @media only screen and (max-width: 768px) {
     .homeLogo {
         display: none;
-        height: auto;
     }
 
     .homeTitle {
-        width: 80%;
+        width: 90%;
         margin: auto;
         text-align: center;
-        font-size: 60px;
+        font-size: 50px;
         margin-top: 150px;
     }
     
     .homeDesc {
-        width: 80%;
+        width: 90%;
         margin: auto;
         text-align: center;
-        font-size: 34px;
+        font-size: 28px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-around;
     }
     
-    a input {
-        display: block;
-        margin: auto;
-        height: 50px;
-        width: 70%;
-        font-size: 32px;
-        color: #fff;
-        background-color: var(--corDeFundo);
-        border: 1px solid #000;
-        border-radius: 10px;
+    #first {
+        margin: 20px 0 0 0;
     }
-
-    .home a {
-        text-decoration: none;
+    
+    @media only screen and (max-width: 504px) {
+        .buttons {
+            align-items: center;
+            flex-direction: column;
+        }
     }
-
     .navLogo {
         display: block;
         position: absolute;
         color: #fff;
-        top: 10px;
         right: 30px;
-        font-size: 28px;
+        top: 5px;
+        font-size: 22px;
         text-transform: uppercase;
     }
     
     .navLogo span {
-        color: #BF520A;   
+        color: var(--corDeFundo);   
     }
     
     #waiterImg {
@@ -411,13 +408,14 @@ button {
     }
 }
 
-@media only screen and (max-width: 1188px) {
+ @media only screen and (max-width: 1065px) {
     .homeLogo {
-        margin-top: 170px;
+        margin-top: 100px;
+        margin-left: 20px;
     }
 
-    .aboutUs {
-        height: 800px;
+    .homeTitle, .homeLogo, .homeDesc, #first {
+        margin-left: 20px;
     }
 
     #waiterImg {
@@ -438,8 +436,3 @@ button {
     }
 }
 
-    @media only screen and (max-width: 1340px) {
-        .homeLogo {
-            margin-top: 140px;
-        }
-    }
