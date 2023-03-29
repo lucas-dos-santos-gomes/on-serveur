@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/login.css">
     <title>On Serveur</title>
 </head>
 <body>
@@ -29,11 +30,45 @@
           <li><a href="#">Aprenda conosco</a></li>
         </ul>
     </nav> 
-
     <div class="navLogo">
         <h1>ser<span>v</span>eur</h1>
     </div>
-
+    <div class="modalContainer1">
+        <div class="modal1" class="modal">
+            <button class="btnClose" onclick="closeModal1()"><img src="./src/img/iconeClose.png" alt="botão para fechar a janela de login"></button>
+            <img id="logoUsuario" src="./src/img/logoLoginUsuario.png" alt="logo que representa um usuário">
+            <p>Não tem uma conta? <a href="#" target="_self">Cadastre-se<a></p>
+            <form action="" id="form">
+                <input type="text" id="btnUsuario" placeholder="Usuário" required maxlength="15">
+                <input type="password" id="btnSenha" placeholder="Senha" required minlength="6" maxlength="10">
+                <button type="submit">Acessar</button>
+            </form>
+            <div id="opcoesLogin">
+                <p>OU</p>
+                <a href="#"><img src="./src/img/loginGoogle.png" alt="clique aqui para fazer o login pela sua conta do Google"></a>
+                <a href="#"><img src="./src/img/loginFacebook.png" alt="clique aqui para fazer login pela sua conta do Facebook"></a>
+                <a href="#"><img src="./src/img/loginLinkedin.png" alt="clique aqui para fazer login pela sua conta do Linkedin"></a>
+            </div>
+        </div>  
+    </div>
+    <div class="modalContainer2">
+        <div class="modal2" class="modal">
+            <button class="btnClose" onclick="closeModal2()"><img src="./src/img/iconeClose.png" alt="botão para fechar a janela de login"></button>
+            <img id="logoUsuario" src="./src/img/logoLoginEmpresas.png" alt="logo que representa um usuário">
+            <p>Não tem uma conta? <a href="#" target="_self">Cadastre-se<a></p>
+            <form action="" id="form">
+                <input type="text" id="btnUsuario" placeholder="Usuário" required maxlength="15">
+                <input type="password" id="btnSenha" placeholder="Senha" required minlength="6" maxlength="10">
+                <button>Acessar</button>
+            </form>
+            <div id="opcoesLogin">
+                <p>OU</p>
+                <a href="#"><img src="./src/img/loginGoogle.png" alt="clique aqui para fazer o login pela sua conta do Google"></a>
+                <a href="#"><img src="./src/img/loginFacebook.png" alt="clique aqui para fazer login pela sua conta do Facebook"></a>
+                <a href="#"><img src="./src/img/loginLinkedin.png" alt="clique aqui para fazer login pela sua conta do Linkedin"></a>
+            </div>
+        </div>  
+    </div>
     <section class="home">
         <h1 class="homeLogo">ser<span>v</span>eur</h1>
         <p class="homeTitle">Serviço de qualidade do início ao fim.</p>
@@ -41,16 +76,14 @@
         <button id="first" class="custom-btn btn-11">empresas<div class="dot"></div></button>
         <button class="custom-btn btn-11">freelancer<div class="dot"></div></button>
     </section>
-    
     <section class="aboutUs">
         <div class="textContent">
             <h1 class="aboutUsTitle">sobre nós</h1>
             <p class="aboutUsDesc">Nós somos uma equipe apaixonada em conectar os melhores garçons independentes do mercado com clientes que buscam um serviço excepcional.</p>
         </div>
-
         <img src="./src/img/waiter.png" id="waiterImg">
     </section>
-        
     <script src="./src/js/script.js"></script>
+    <script src="./src/js/modal.js"></script> 
 </body>
 </html>
