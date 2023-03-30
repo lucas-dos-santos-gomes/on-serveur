@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+
+:root {
+   --corDeFundo: #5A071F;
+   --corBotao: #421C29;
+   --fonte: 'Alata', sans-serif;
+}
+
+/* configurando a home com uma plano de fundo */
+.home {
+   height: 768px;
+   background-image: url(../img/bg-home.svg);
+   background-size: cover;
+   background-position: center;
+}
+
+/* logo */
+.homeLogo {
+   display: flex;
+   margin-top: 150px;
+   margin-left: 100px;
+   font-size: 42px;
+   color: #fff;
+   text-transform: uppercase;
+}
+
+/* v alaranjado da home */
+.home span {
+   color: var(--corDeFundo);
+}
+
+/* titulo da pagina inicial */
+.homeTitle {
+   display: flex;
+   margin-top: 12px;
+   margin-left: 100px;
+   font-size: 60px;
+   color: #fff;
+   max-width: 795px;
+   font-family: var(--fonte);
+   /*-webkit-text-stroke: 3px #000;*/
+}
+
+/* descrição da home */
+.homeDesc {
+   display: flex;
+   margin-top: 14px;
+   margin-left: 100px;
+   color: #fff;
+   max-width: 655px;
+   font-size: 25px;
+   font-family: var(--fonte);
+}
