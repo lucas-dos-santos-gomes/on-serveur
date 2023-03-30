@@ -118,16 +118,21 @@ input:focus, form button:focus{
     outline: 0;
 }
 #opcoesLogin p{
-    margin-bottom: 15px;
     border-radius: 10px;
     background-color: #53030C;
+    padding: 3px;
+    display: block;
+    top: 320px;
+    position: absolute;
+    font-size: 20px;
+
 }
 #opcoesLogin{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 60px;
 }
 #opcoesLogin img{
     width: 200px;
