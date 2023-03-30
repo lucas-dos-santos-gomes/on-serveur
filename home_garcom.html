@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/home-garcom.css">
+    <title>On Serveur</title>
+</head>
+<body>
+    <nav>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><h1>serveur</h1></li>
+          <li><a href="#">Login</a></li>
+          <div class="line"></div>
+          <li><a href="#">Registre-se</a></li>
+          <div class="line"></div>
+          <li><a href="#">Vagas para Freelancer</a></li>
+          <div class="line"></div>
+          <li><a href="#">Nossos serviços</a></li>
+          <div class="line"></div>
+          <li><a href="#">Quem somos?</a></li>
+          <div class="line"></div>
+          <li><a href="#">Aprenda conosco</a></li>
+        </ul>
+    </nav> 
+
+    <div class="navLogo">
+        <h1>ser<span>v</span>eur</h1>
+    </div>
+
+    <section class="home">
+        <h1 class="homeLogo">ser<span>v</span>eur</h1>
+        <p class="homeTitle">Garçom experiente, serviço de qualidade!</p>
+        <p class="homeDesc">Nosso compromisso é oferecer um serviço de garçom excepcional, com atenção aos detalhes, agilidade e cordialidade, para que você possa desfrutar de sua experiência gastronômica ao máximo.</p>
+        
+    </section>
+
+    <section id="vaga">
+        <div class="vagas">
+            <img src="/src/img/Renaissance.png" alt="">
+            <h1>Vaga para bartender</h1>
+            <div class="info">
+                <p>Hotel Renaissance</p>
+                <p>Sapato e calça social</p>
+                <img src="/src/img/google-maps.png" alt="">
+                <a href="#">Ver no mapa</a> 
+            </div>
+
+            <button class="open_modal" onclick="abrir_modal()">Ver vaga</button>
+            <div class="fade"></div>
+            <div class="modal">
+                <div class="modal_header">
+                  <button class="close_modal" onclick="fechar_modal()">Fechar</button>  
+                </div>
+                
+                <div class="modal_body">
+                    <img src="/src/img/rennaiscense_modal.png" class="local">
+                    <div class="vagas_informacoes">
+                        <img src="img/maps.png" width="10%">
+                        <p>Alameda Santos, 2233 - Jardim Paulista, São Paulo-SP</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/uniforme.png" width="11%">
+                        <p>Levar sapato e calça social (Levar documento RG ou CPF)</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/dinheiro.png" width="11%">
+                        <p>Pagamento efetuado após o termino do evento</p>
+                    </div>
+
+                    <button class="aceitar_vaga">Aceitar vaga</button>
+                </div>    
+            </div>
+            
+        </div>
+
+        <div class="vagas">
+            <img src="/src/img/Bisutti.png" alt="">
+            <h1>Vaga para garçom</h1>
+            <div class="info">
+                <p>Casa Bisutti</p>
+                <p>Sapato e calça social</p>
+                <img src="/src/img/google-maps.png" alt="">
+                <a href="#">Ver no mapa</a> 
+            </div>
+
+            <button class="open_modal" onclick="abrir_modal2()">Ver vaga</button>
+            <div class="fade2"></div>
+            <div class="modal2">
+                <div class="modal_header">
+                  <button class="close_modal" onclick="fechar_modal2()">Fechar</button>  
+                </div>
+                
+                <div class="modal_body">
+                    <img src="/src/img/bizuth_modal.png" class="local">
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/maps.png" width="10%">
+                        <p>R. Casa do Ator, 577 - Vila Olímpia, São Paulo - SP</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/uniforme.png" width="11%">
+                        <p>Levar sapato e calça social (Levar documento RG ou CPF)</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/dinheiro.png" width="11%">
+                        <p>Pagamento efetuado após o termino do evento</p>
+                    </div>
+
+                    <button class="aceitar_vaga">Aceitar vaga</button>
+                </div>    
+            </div>
+        </div>
+
+        <div class="vagas">
+            <img src="/src/img/Rosewood.png" alt="">
+            <h1>Vaga para recepcionista</h1>
+            <div class="info">
+                <p>Hotel Rosewood</p>
+                <p>Sapato, calça social</p>
+                <img src="/src/img/google-maps.png" alt="">
+                <a href="#">Ver no mapa</a>
+            </div>
+
+            <button class="open_modal" onclick="abrir_modal3()">Ver vaga</button>
+            <div class="fade3"></div>
+            <div class="modal3">
+                <div class="modal_header">
+                  <button class="close_modal" onclick="fechar_modal3()">Fechar</button>  
+                </div>
+                
+                <div class="modal_body">
+                    <img src="/src/img/rosewood_modal.png" class="local">
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/maps.png" width="10%">
+                        <p>R. Itapeva, 435 - Bela Vista, São Paulo</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/uniforme.png" width="11%">
+                        <p>Levar sapato e calça social (Levar documento RG ou CPF)</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/dinheiro.png" width="11%">
+                        <p>Pagamento efetuado após o termino do evento</p>
+                    </div>
+
+                    <button class="aceitar_vaga">Aceitar vaga</button>
+                </div>    
+            </div>
+        </div>
+
+        <div class="vagas">
+            <img src="/src/img/Berro.png" alt="">
+            <h1>Vaga para copeiro</h1>
+            <div class="info">
+                <p>O Berro</p>
+                <p>Sapato e calça social</p>
+                <img src="/src/img/google-maps.png" alt="">
+                <a href="#">Ver no mapa</a> 
+            </div>
+
+            <button class="open_modal" onclick="abrir_modal4()">Ver vaga</button>
+            <div class="fade4"></div>
+            <div class="modal4">
+                <div class="modal_header">
+                  <button class="close_modal" onclick="fechar_modal4()">Fechar</button>  
+                </div>
+                
+                <div class="modal_body">
+                    <img src="/src/img/berro_modal.png" class="local">
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/maps.png" width="10%">
+                        <p>R. Maj. Pinheiro Franco, 328 - Shangai, Mogi das Cruzes</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/uniforme.png" width="11%">
+                        <p>Levar sapato e calça social (Levar documento RG ou CPF)</p>
+                    </div>
+                    <div class="vagas_informacoes">
+                        <img src="/src/img/dinheiro.png" width="11%">
+                        <p>Pagamento efetuado após o termino do evento</p>
+                    </div>
+                </div>    
+
+                <button class="aceitar_vaga">Aceitar vaga</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="ver">
+        <div id="botao">
+            <a href="#">VER MAIS VAGAS</a>
+        </div> 
+    </section>
+
+    <footer>
+        <h2 id="logo_footer">SERVEUR</h2>
+        <div id="links_footer">
+            <a href="#">INÍCIO</a>
+            <a href="#">SOBRE NÓS</a>
+            <a href="#">SUPORTE</a>
+        </div>
+        <div id="redes_footer">
+            <img src="/src/img/LinkedIn_footer.png" alt="">
+            <img src="/src/img/Instagram_footer.png" alt="">
+            <img src="/src/img/Facebook_footer.png" alt="">
+            <button>CONTATO</button>
+        </div>
+    </footer>
+    
+    <script src="/src/js/home-garcom.js"></script>
+</body>
+</html>

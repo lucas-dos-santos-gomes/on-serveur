@@ -1,0 +1,856 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+@font-face{
+    font-family: 'luxia';
+    src: url(../font/Luxia-Regular.otf);
+ }
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+:root {
+    --corDeFundo: #5A071F;
+    --fonte: 'Alata', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* estilizando o menu hamburguer */
+.mobile-menu {
+    position: absolute;
+    top: 12px;
+    left: 50px;
+    cursor: pointer;
+    background-color: var(--corDeFundo);
+    padding: 5px;
+    border-radius: 15px;
+    z-index: 100;
+}
+  
+/* estilizando todas as divs dentro do menu */
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* estilizando a lista aonde ficará os links */
+.nav-list {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top: 8vh;
+    right: left;
+    width: 385px;
+    height: 634px;
+    border-radius: 0 20px 20px 0;
+    background: var(--corDeFundo);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    z-index: 100;
+    overflow: hidden;
+}
+  
+/* mais configurações para as fontes */
+.nav-list li {
+    margin-left: 0;
+    letter-spacing: 3px;
+    margin: auto;
+    opacity: 0;
+}
+
+/* estlizando o titulo serveur dentro do menu */
+.nav-list li:first-child {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: serif;
+    font-size: 25px;
+}
+
+/* links do menu */
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: var(--fonte);
+    font-size: 22px;
+}
+  
+/* função hover dos links do menu */
+.nav-list li a:hover {
+    opacity: 0.7;
+}
+  
+/* linha branca traçada embaixo de cada link */
+.line {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+}
+
+/* trazendo a caixa contendo os links para a posição inicial (0) */
+.nav-list.active {
+    transform: translateX(0);
+}
+ 
+/* keyframe de animação para trazer a caixa */
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+/* estilizando o menu hamburguer para, quando clicado, mudar a posição das linhas formando um x */
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* ----> Logo para mobile <---- */
+.navLogo {
+    display: none;
+}
+  
+/* ----->FIM DO MENU HAMBURGUER<----- */
+
+/* ----> HOME <---- */
+
+/* configurando a home com uma plano de fundo */
+.home {
+    height: 768px;
+    background-image: url(../img/home-img.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* logo */
+.homeLogo {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 100px;
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: luxia;
+    font-weight: 400;
+}
+
+/* v alaranjado da home */
+.home span {
+    color: var(--corDeFundo);
+}
+
+/* titulo da pagina inicial */
+.homeTitle {
+    display: flex;
+    margin-top: 12px;
+    margin-left: 100px;
+    font-size: 60px;
+    color: #fff;
+    max-width: 795px;
+    font-family: var(--fonte);
+    /*-webkit-text-stroke: 3px #000;*/
+}
+
+/* descrição da home */
+.homeDesc {
+    display: flex;
+    margin-top: 14px;
+    margin-left: 100px;
+    color: #fff;
+    max-width: 655px;
+    font-size: 25px;
+    font-family: var(--fonte);
+}
+
+/* ---->FIM HOME<---- */
+
+
+/* ---->INÍCIO SOBRE NÓS<---- */
+
+/* texto sobre nos */
+.aboutUsTitle {
+    display: flex;
+    margin-left: 110px;
+    margin-top: 100px;
+    font-size: 80px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--fonte);
+}
+
+/* descrição da area sobre nos */ 
+.aboutUsDesc {
+    display: flex;
+    margin-left: 110px;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 48px;
+    max-width: 631px;
+    font-family: var(--fonte);
+    z-index: 5612;
+}
+
+/* ----> imagem do GARÇOM <---- */
+#waiterImg {
+    position: absolute;
+    right: 0;
+    top: 825px;
+}
+
+/*INÍCIO VAGAS*/
+
+/*section das vagas*/
+#vaga{
+    background-color: #fff;
+    font-family: alata;
+}
+
+/*centralização das divs*/
+#vaga div{
+    display: flex;
+    justify-content: center;
+}
+
+/*margin entre as divs vagas*/
+.vagas{
+    margin: 100px auto 0;
+} 
+
+/*estilização dos titulos*/
+.vagas h1{
+    width: 31%;
+    position: absolute;
+    font-size: 37px;
+    margin-top: 285px;
+    margin-right: 670px;
+    font-weight: 400;
+}
+
+/*deslocação das informações*/
+.info{
+    position: absolute;
+    font-size: 27px;
+    flex-direction: column;
+    margin-top: 345px;
+    margin-right: 830px;
+}
+
+/*deslocação da imagem*/
+.info img{
+    position: absolute;
+    width: 15%;
+    margin-top: 70px;
+}
+
+/*estilização do link maps*/
+.info a{
+    color: #001AFF;
+    text-decoration: none;
+    margin-left: 15%;
+}
+
+/*estilização do botão que abre o modal*/
+.open_modal{
+    position: absolute;
+    height: 52px;
+    width: 310px;
+    padding-bottom: 6px;
+    font-size: 30px;
+    margin-top: 400px;
+    margin-left: 700px;
+    background-color: var(--corDeFundo);
+    border-radius: 12px;
+    font-family: alata;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+/*estilização do botão que fecha o modal*/
+.close_modal{
+    background-color: #5A071F;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: alata;
+    cursor: pointer;
+}
+
+/*efeito de escurecimento atrás do modal*/
+.fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    visibility: hidden;
+}
+
+/*efeito de escurecimento atrás do modal 2*/
+.fade2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    visibility: hidden;
+}
+
+/*efeito de escurecimento atrás do modal 3*/
+.fade3{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    visibility: hidden;
+}
+
+/*efeito de escurecimento atrás do modal 4*/
+.fade4{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    visibility: hidden;
+}
+
+/*animação de abertura do modal*/
+@keyframes animate{
+    from{
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+
+    to{
+        opacity: 1;
+        width: 500px;
+        height: 500px;
+    }
+}
+
+/*estilização do modal*/
+.modal{
+    position: fixed;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 500px;
+    height: 530px;
+    max-width: 90%;
+    padding: 15px;
+    border: #5A071F solid 4px;
+    border-radius: 10px;
+    visibility: hidden;
+    animation-name: animate;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+/*estilização do modal 2*/
+.modal2{
+    position: fixed;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 500px;
+    height: 530px;
+    max-width: 90%;
+    padding: 15px;
+    border: #5A071F solid 4px;
+    border-radius: 10px;
+    visibility: hidden;
+    animation-name: animate;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+/*estilização do modal 3*/
+.modal3{
+    position: fixed;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 500px;
+    height: 530px;
+    max-width: 90%;
+    padding: 15px;
+    border: #5A071F solid 4px;
+    border-radius: 10px;
+    visibility: hidden;
+    animation-name: animate;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+/*estilização do modal 4*/
+.modal4{
+    position: fixed;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 500px;
+    height: 530px;
+    max-width: 90%;
+    padding: 15px;
+    border: #5A071F solid 4px;
+    border-radius: 10px;
+    visibility: hidden;
+    animation-name: animate;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+/*deslocamento header modal*/
+.modal_header{
+    margin-left: 80%;
+    margin-bottom: 15px;
+}
+
+/*organização da body do modal*/
+.modal_body{
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/*alinhamento da imagem do modal*/
+.local{
+    margin-bottom: 10px;
+    border-radius: 7px;
+    border: #5A071F solid 2px;
+}
+
+/*alinhamento das informações do modal*/
+.vagas_informacoes{
+    margin-top: 15px;
+}
+
+/*alinhamento parágrafo do modal*/
+.vagas_informacoes p{
+    padding-top: 9px;
+    width: 120%;
+}
+
+/*alinhamento imagem do modal*/
+.vagas_informacoes img{
+    padding-right: 5px;
+    margin-left: 15px;
+}
+
+/*estilização do botão aceitar vagas do modal*/
+.aceitar_vaga{
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #5A071F;
+    color: #fff;
+    font-family: alata;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/*organização da section*/
+#ver{
+    display: flex;
+    justify-content: center;
+}
+
+/*estilização do botão ver mais vagas*/
+#botao{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5A071F;
+    width: 500px;
+    height: 100px;
+    margin-left: px;
+    border-radius: 17px;
+    margin-top: 80px;
+    font-size: 40px;
+
+}
+
+/*estilização da escrita do botão ver mais vagas*/
+#botao a{
+    text-decoration: none;
+    color: #fff;
+    font-family: alata;
+}
+
+/*FIM VAGAS*/
+
+footer{
+    display: flex;
+    margin-top: 250px;
+    height: 190px;
+    background-image: url(../img/fundo_footer.png);
+}
+
+#logo_footer{
+    display: flex;
+    font-size: 65px;
+    align-items: center;
+    margin-left: 50px;
+    color: #fff;
+    font-family: luxia;
+    font-weight: 400;
+    
+}
+
+#links_footer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 7%;
+}
+
+#links_footer a{
+    color: #fff;
+    padding: 40px;
+    font-size: 20px;
+    font-family: alata;
+}
+
+#redes_footer{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+#redes_footer button{
+    position: absolute;
+    background-color: #D9D9D9;
+    border: navajowhite;
+    border-radius: 20px;
+    padding: 10px 80px;
+    color: #8A8989;
+    margin-top: 70px;
+    right: 120px;
+    font-family: alata;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* visualização mobile */
+@media only screen and (max-width: 768px) {
+    .homeLogo {
+        display: none;
+        height: auto;
+    }
+
+    .homeTitle {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 60px;
+        margin-top: 150px;
+    }
+    
+    .homeDesc {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 32px;
+    }
+    
+    a input {
+        display: block;
+        margin: auto;
+        height: 50px;
+        width: 70%;
+        font-size: 32px;
+        color: #fff;
+        background-color: var(--corDeFundo);
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+
+    .home a {
+        text-decoration: none;
+    }
+
+    .navLogo {
+        display: block;
+        position: absolute;
+        color: #fff;
+        top: 10px;
+        right: 30px;
+        font-size: 28px;
+        text-transform: uppercase;
+        font-family: luxia;
+    }
+    
+    .navLogo span {
+        color: #5A071F;   
+    }
+    
+    .vagas h1{
+        margin: 0;
+        margin-top: 21%;
+        font-size: 30px;
+        width: 95%;
+    }
+
+    .info{
+        margin: 0;
+        font-size: 20px;
+        margin-top: 27%;
+        width: 90%;
+
+        
+
+    }
+
+    .info img{
+        position: absolute;
+        width: 4%;
+        margin-bottom: 20px;
+    }
+
+    .info a{
+        margin-left: 5%;
+    }
+
+    .open_modal{
+        margin: 0;
+        width: 20%;
+        height: 34px;
+        font-size: 18px;
+        margin-top: 32%;
+        margin-left: 70%;
+    }
+
+    .botao a input{
+        width: 90%;
+        font-size: 50px;
+    }
+
+    #botao{
+        width: 70%;
+        font-size: 40px;
+        height: 100px;
+    }
+
+    #footer h2{
+        display: none;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .homeTitle {
+        font-size: 40px;
+    }
+
+    .homeDesc {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .aboutUs {
+        height: 500px;
+    }
+
+    .aboutUsTitle {
+        font-size: 50px;
+    }
+    
+    .aboutUsDesc {
+        font-size: 28px;
+    }
+
+    .mobile-menu {
+        left: 25px;
+    }
+    
+    .navLogo {
+        font-size: 22px;
+        right: 5px;
+    }
+
+    .vagas h1{
+        margin: 0;
+        font-size: 18px;
+        margin-top: 20%;
+    }
+
+    .info{
+        margin: 0;
+        font-size: 14px;
+        margin-top: 26%;
+        margin-left: 1%;
+    }
+
+    .info img{
+        position: absolute;
+        width: 2%;
+        margin-bottom: 35px;
+    }
+
+    .info a{
+        margin-left: 4%;
+    }
+
+    .open_modal{
+        margin: 0;
+        width: 20%;
+        height: 30px;
+        margin-top: 32%;
+        margin-left: 70%;
+    }
+
+    .bnt a{
+        margin-top: 4px;
+        font-size: 14px;
+    }
+
+    #botao{
+        width: 70%;
+        font-size: 30px;
+        height: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 1188px) {
+    .homeLogo {
+        margin-top: 170px;
+    }
+
+    .aboutUs {
+        height: 800px;
+    }
+
+    #waiterImg {
+        display: none;
+    }
+
+    .aboutUsTitle {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .aboutUsDesc {
+        display: block;
+        margin: 30px auto 0 auto;
+        max-width: 800px;
+        text-align: center;
+
+    }
+
+    .vagas h1{
+        margin: 0;
+        margin-top: 21%;
+        width: 95%;
+    }
+
+    .info{
+        margin: 0;
+        margin-top: 27%;
+        width: 94%;
+
+    }
+
+    .info img{
+        position: absolute;
+        width: 4%;
+        margin-top: 70px;
+    }
+
+    .info a{
+        margin-left: 4%;
+    }
+
+    .open_modal{
+        margin: 0;
+        width: 20%;
+        height: 34px;
+        font-size: 18px;
+        margin-top: 32%;
+        margin-left: 70%;
+    }
+
+    #logo_footer{
+        display: none;
+    }
+
+    #links_footer{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #links_footer a{
+        padding: 23px;
+        width: 100%;
+        height: 40px;
+        font-size: 19px;
+    }
+
+
+    #redes_footer img{
+        width: 30%;
+    }
+
+    #redes_footer button{
+        width: 20%;
+        height: 30px;
+        padding: 3px 10px 3px 10px;
+        font-size: 10px;
+        left: 79%;
+        
+    }
+}
