@@ -1,0 +1,135 @@
+/* Tablet */
+@media only screen and (min-width:481px){
+    @media only screen and (max-width:720px)
+{
+    header #text_fundo{
+        width: 45%;   
+    }
+
+    #text_fundo .h2_header{
+        font-size: 30px;
+    }
+
+    #text_fundo .p1{
+        font-size: 18px;
+    }
+
+    #h2_Linguagem{
+        font-size: 28px;
+    }
+
+    #section1 img{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    #Linguagem_dos_pratos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #titulo_etiqueta #Etiqueta{
+        font-size: 28px;
+    }
+
+    #youtube h2{
+        font-size: 28px;
+    }
+
+    #curso{
+        width: 100%;
+    }
+
+    #youtube iframe{
+        width: 400px;
+        height: 300px;
+    }
+
+    #logo_rodape h1{
+        font-size: 30px;
+    }
+
+    #links a{
+        font-size: 13px;
+        margin-left: 12.5px;
+    }
+}
+
+}
+
+/* Mobile */
+@media only screen and (max-width:480px){
+
+
+    header #text_fundo{
+        width: 96%;
+    }
+    
+    #text_fundo .h2_header{
+        font-size: 20px;
+    }
+
+    #text_fundo .p1{
+        font-size: 18px;
+    }
+
+    #h2_Linguagem{
+        font-size: 28px;
+    }
+
+    #section1 img{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    #Linguagem_dos_pratos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #titulo_etiqueta #Etiqueta{
+        font-size: 28px;
+    }
+
+    #youtube h2{
+        font-size: 28px;
+    }
+
+    #curso{
+        width: 100%;
+    }
+
+    #youtube iframe{
+        width: 100%;
+        height: 200px;
+        align-items: center;
+    }
+
+    #logo_rodape h1{
+        display: none;
+    }
+
+    #links a{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+}
+
+
+@media only screen and (min-width:721px){
+    @media only screen and (max-width:865px){
+        
+        header{
+            padding-top: 130px;
+        }
+        header #text_fundo{
+            width: 45%;
+        }
+    }
+}

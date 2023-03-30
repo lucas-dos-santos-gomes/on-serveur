@@ -1,0 +1,16 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: auto;
+}
+
+#carouselExampleRide .carousel-inner{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
