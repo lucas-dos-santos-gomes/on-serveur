@@ -63,11 +63,7 @@ p > a{
     font-weight: bold;
     text-decoration: none;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 form input{
     width: 150px;
     height: 35px;
@@ -78,6 +74,12 @@ form input{
     font-weight: bold;
     font-size: 15px;
     padding-left: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #btnSenha{
     background: url('../img/inputSenha.png') no-repeat;
