@@ -111,3 +111,59 @@
 .promover-evento_conteudo p:not(.botao-promover) {
    font-size: 25px;
 }
+
+.contratar {
+   width: 100%;
+   font-family: var(--fonte);
+}
+
+.contratar h1 {
+   font-size: 40px;
+   text-align: center;
+   margin: 40px 0 50px;
+}
+
+.contratar_lista {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   gap: 30px;
+   max-width: 1000px;
+   margin: 0 auto 50px;
+}
+
+.contratar_lista li {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 300px;
+   height: 400px;
+   padding: 30px 30px 0;
+   box-sizing: border-box;
+   background-color: #D9D9D9;
+   list-style: none;
+}
+
+.contratar_lista li img {
+   width: 100px;
+   margin-bottom: 5px;
+}
+
+.contratar_lista li h4 {
+   font-size: 22px;
+   margin: 30px 0 70px;
+}
+
+.contratar_lista li .botao-contratar {
+   font-size: 20px;
+   padding: 10px 20px;
+   border: 3px solid var(--corDeFundo);
+   border-radius: 15px;
+   cursor: pointer;
+   transition: 200ms;
+}
+
+.botao-contratar:hover {
+   transform: scale(1.1);
+   background-color: var(--corDeFundo);
+   color: #FFF;
+}
