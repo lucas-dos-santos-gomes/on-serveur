@@ -1,6 +1,6 @@
  @font-face{
     font-family: 'luxia';
-    src: url(/src/fontes/Luxia-Regular.otf);
+    src: url(../fonts/Luxia-Regular.otf);
  }
  
  @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
@@ -40,7 +40,7 @@ body {
 .bgimg{
     width: 54vw;
     height: 90vh;
-    background-image: url(/src/img/bgimgcad.svg);
+    background-image: url(../img/bgimgcad.svg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -58,7 +58,7 @@ body {
     display: flex;
     width: 38vw;
     height: 90vh;
-    background-image: url(/src/img/bgforms.svg);
+    background-image: url(../img/bgforms.svg);
     background-size: contain;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -160,4 +160,3 @@ a:hover{
         width: 70%;
     }
 }
-
