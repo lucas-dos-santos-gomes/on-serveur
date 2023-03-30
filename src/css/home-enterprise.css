@@ -69,6 +69,7 @@
 
 .promover-evento {
    background-image: url(../img/bg-evento.svg);
+   background-size: cover;
    width: 80%;
    height: 80%;
 }
