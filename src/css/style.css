@@ -473,6 +473,10 @@ footer {
         margin-bottom: 20px;
     }
 
+    #first {
+        margin: 0 20px 0 0;
+    }
+
     .aboutUs {
         height: 500px;
     }
