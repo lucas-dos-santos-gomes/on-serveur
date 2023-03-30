@@ -65,6 +65,7 @@ div .p1{
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 25px;
 }
@@ -204,5 +205,15 @@ footer{
     font-weight: 100;
     border-radius: 20px;
     align-items: center;
+}
+
+@media screen and (max-width:500px) {
+    
+    header #text_fundo{
+        width: 98%;
+    }
+    #youtube iframe{
+        width: 95%;
+    }
 }
 
