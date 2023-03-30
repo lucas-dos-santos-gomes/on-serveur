@@ -91,6 +91,7 @@
    width: 80px;
    padding: 10px;
    text-align: center;
+   border: 2px solid var(--corBotao);
    border-radius: 20px;
    background-color: var(--corBotao);
    color: #FFF;
@@ -101,6 +102,8 @@
 
 .botao-promover:hover {
    transform: scale(1.1);
+   background-color: #FFF;
+   color: var(--corDeFundo);
 }
 
 .promover-evento_conteudo h2 {
@@ -115,6 +118,8 @@
 .contratar {
    width: 100%;
    font-family: var(--fonte);
+   padding: 0 30px;
+   box-sizing: border-box;
 }
 
 .contratar h1 {
@@ -166,4 +171,24 @@
    transform: scale(1.1);
    background-color: var(--corDeFundo);
    color: #FFF;
+}
+
+@media screen and (max-width: 1040px) {
+   .contratar_lista {
+      grid-template-columns: auto auto;
+      max-width: 700px;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .contratar_lista {
+      grid-template-columns: auto;
+      width: 300px;
+   }
+}
+
+@media screen and (max-width: 402px) {
+   .contratar h1 {
+      font-size: 30px;
+   }
 }
