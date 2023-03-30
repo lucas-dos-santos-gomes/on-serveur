@@ -246,7 +246,8 @@ button {
 }
 
 /* função de animação com o flash do botão  */
-@-webkit-keyframes shiny-btn1 {
+/* @-webkit-keyframes */
+@keyframes shiny-btn1 {
     0% {
         -webkit-transform: scale(0) rotate(45deg); opacity: 0; 
     }
