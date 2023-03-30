@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/login.css">
     <link rel="shortcut icon" href="./src/img/icon-wine.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
     <title>On Serveur</title>
 </head>
 <body>
@@ -30,11 +32,6 @@
           <li><a href="etiqueta.html">Aprenda conosco</a></li>
         </ul>
     </nav> 
-
-    <div class="navLogo">
-        <h1>ser<span>v</span>eur</h1>
-    </div>
-
     <div class="modalContainer1">
         <div class="modal1" class="modal">
             <button class="btnClose" onclick="closeModal1()"><img src="./src/img/iconeClose.png" alt="botão para fechar a janela de login"></button>
@@ -43,7 +40,7 @@
             <form action="" id="form">
                 <input type="text" id="btnUsuario" placeholder="Usuário" required maxlength="15">
                 <input type="password" id="btnSenha" placeholder="Senha" required minlength="6" maxlength="10">
-                <button type="submit" id="acessar-home-empresas"><a href="./home_garcom.html">Acessar</a></button>
+                <a href="./home_garcom.html"><button id="acessar-home-empresas" type="submit">Acessar</button></a>
             </form>
             <div id="opcoesLogin">
                 <p>OU</p>
@@ -60,9 +57,9 @@
             <img id="logoUsuario" src="./src/img/logoLoginEmpresas.png" alt="logo que representa um usuário">
             <p>Não tem uma conta? <a href="cadastrese.html" target="_self">Cadastre-se</a></p>
             <form action="" id="form">
-                <input type="text" id="btnUsuario" placeholder="Usuário">
-                <input type="password" id="btnSenha" placeholder="Senha" >
-                <button><a href="./home-enterprise.html">Acessar</a></button>
+                <input type="text" id="btnUsuario" placeholder="Usuário" required maxlength="15">
+                <input type="password" id="btnSenha" placeholder="Senha" required minlength="6" maxlength="10">
+                <a href="./home-enterprise.html"><button id="acessar-home-empresas" type="submit">Acessar</button></a>
             </form>
             <div id="opcoesLogin">
                 <p>OU</p>
@@ -90,12 +87,24 @@
         </div>
         <img src="./src/img/waiter.png" id="waiterImg">
     </section>
-
-    <section class="nossos-servicos">
-        <a id="servicos"></a>
-        <div class="nossos-servicos_imagem"></div>
+    <section class="servicos">
+        <div class="swiffy-slider">
+            <ul class="slider-container">
+                <li><img src="./src/img/carrossel1.png" style="max-width: 100%;height: auto;"></li>
+                <li><img src="./src/img/carrossel2.png" style="max-width: 100%;height: auto;"></li>
+                <li><img src="./src/img/carrossel3.png" style="max-width: 100%;height: auto;"></li>
+            </ul>
+        
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button>
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
     </section>
-
     <footer>
         <h1 class="footerLogo">serveur</h1>
         <div class="lineLogoFooter"></div>
@@ -121,9 +130,7 @@
                     <li><a href="/">Dicas</a></li>
                     <li><a href="/">Sobre nós</a></li>
                 </ul>
-            </div>
-
-            
+            </div>            
         </div>
 
         <div class="line100Footer"></div>

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+/*Fonte Gayathri*/ @import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap');
+/*Fonte Alegreya*/ @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap');
+/*Fonte Encode*/ @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
 
 @font-face {
     font-family: 'luxia';
@@ -15,7 +17,7 @@
 :root {
     --corDeFundo: #5A071F;
     --corBotao: #421C29;
-    --fonte: 'Alata', sans-serif;
+    --fonte:'Encode Sans', sans-serif;
     --fonteTitulo: 'luxia' sans-serif; 
 }
 
@@ -70,7 +72,6 @@ li h1 {
   
 /* mais configurações para as fontes */
 .nav-list li {
-    margin-left: 0;
     letter-spacing: 3px;
     margin: auto;
     opacity: 0;
@@ -181,6 +182,7 @@ li h1 {
     font-size: 60px;
     color: #fff;
     max-width: 795px;
+    font-weight: bold;
     font-family: var(--fonte);
     /*-webkit-text-stroke: 3px #000;*/
 }
@@ -198,14 +200,16 @@ li h1 {
 
 /* adicionando botões de empresas e freelancer */
 button {
-    margin-top: 20px;
     text-transform: uppercase;
 }
-
-/* estilizando a distancia do primeiro botão */
-#first {
-    margin-left: 102px;
-    margin-right: 25px;
+.buttons{
+    margin-left: 100px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#first{
+    margin-right: 20px;
 }
 
 /* estilizando o botão em si */
@@ -283,13 +287,13 @@ button {
 /* ---->INÍCIO SOBRE NÓS<---- */
 .aboutUs {
     height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* texto sobre nos */
 .aboutUsTitle {
-    display: flex;
-    margin-left: 110px;
-    margin-top: 70px;
     font-size: 55px;
     color: #fff;
     text-transform: uppercase;
@@ -299,11 +303,11 @@ button {
 /* descrição da area sobre nos */ 
 .aboutUsDesc {
     display: flex;
-    margin-left: 110px;
-    margin-top: 25px;
+    align-items: left;
+    justify-content: left;
     color: #fff;
     font-size: 35px;
-    max-width: 631px;
+    max-width: 500px;
     font-family: var(--fonte);
 }
 
@@ -314,10 +318,18 @@ button {
     height: 550px;
     top: 668px;
 }
+/* ----> FIM SOBRE NÓS <---- */
+
+.servicos{
+    background-color: #000;
+    border: none;
+    width: 100%;
+}
 
 footer {
     height: auto;
     background-color: #000;
+    font-family: 'Encode Sans';
 }
 
 .footerLogo {
@@ -397,20 +409,22 @@ footer {
     margin-bottom: 20px;
 }
 
-/* ----> FIM SOBRE NÓS <---- */
 
 /* visualização mobile */
-@media only screen and (max-width: 768px) {
-    .homeLogo {
-        display: none;
+@media only screen and (max-width: 1084px) {
+    .homeLogo{
+        display: flex;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 50px;
+        justify-content: center;
     }
-
+    
     .homeTitle {
         width: 90%;
         margin: auto;
         text-align: center;
         font-size: 50px;
-        margin-top: 150px;
     }
     
     .homeDesc {
@@ -422,39 +436,17 @@ footer {
 
     .buttons {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        margin: 40px 0 0 0;
     }
-    
-    #first {
-        margin: 20px 0 0 0;
+    #waiterImg{
+        display: none; 
     }
-    
-    @media only screen and (max-width: 504px) {
-        .buttons {
-            align-items: center;
-            flex-direction: column;
-        }
-    }
-    .navLogo {
-        display: block;
-        position: absolute;
-        color: #fff;
-        right: 30px;
-        top: 5px;
-        font-size: 22px;
-        text-transform: uppercase;
-    }
-    
-    .navLogo span {
-        color: var(--corDeFundo);   
-    }
-    
-    #waiterImg {
-        display: none;        
-    }
-
+}
     .aboutUs {
         margin-left: 0;
+        display: flex;
+        justify-content: center;
     }
 
     .aboutUsTitle {
@@ -469,7 +461,6 @@ footer {
         max-width: auto;
         text-align: center;
     }
-}
 
 @media only screen and (max-width: 550px) {
     .homeTitle {
@@ -497,54 +488,14 @@ footer {
     .mobile-menu {
         left: 25px;
     }
-    
-    .navLogo {
-        font-size: 22px;
-        right: 5px;
+    .buttons {
+        margin: 0;
     }
-}
-
- @media only screen and (max-width: 1065px) {
-    .homeLogo {
-        margin-top: 100px;
-        margin-left: 20px;
+    #first{
+        margin-bottom: 10px;
+        margin-right: 0;
     }
-
-    .homeTitle, .homeLogo, .homeDesc, #first {
-        margin-left: 20px;
-    }
-
-    #waiterImg {
-        display: none;
-    }
-
-    .aboutUsTitle {
-        display: block;
-        margin-left: 0;
-        text-align: center;
-    }
-    
-    .aboutUsDesc {
-        display: block;
-        margin: 30px auto 0 auto;
-        max-width: 800px;
-        text-align: center;
-    }
-}
-
-.nossos-servicos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 90vh;
-    background-color: #FFF;
-    color: #000;
-}
-
-.nossos-servicos_imagem {
-    background-image: url(../img_carrossel/copeiro.jpeg);
-    background-size: cover;
-    width: 80%;
-    height: 80%;
+    #waiterImg{
+        display: none; 
+    } 
 }
