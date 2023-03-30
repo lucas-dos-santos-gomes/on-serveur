@@ -151,6 +151,8 @@
 .contratar_lista li img {
    width: 100px;
    margin-bottom: 5px;
+   border-radius: 100px;
+   height: 100px;
 }
 
 .contratar_lista li h4 {

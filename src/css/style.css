@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
+@font-face {
+    font-family: 'luxia';
+    src: url('../fonts/Luxia-Display.otf');
+}
+
 /* CSS reset */
 * {
     margin: 0;
@@ -11,12 +16,16 @@
     --corDeFundo: #5A071F;
     --corBotao: #421C29;
     --fonte: 'Alata', sans-serif;
+    --fonteTitulo: 'luxia' sans-serif; 
 }
 
 body {
     background-color: var(--corDeFundo);
 }
 
+li h1 {
+    font-family: var(--fonteTitulo);
+}
 
 /* estilizando o menu hamburguer */
 .mobile-menu {
@@ -71,7 +80,7 @@ body {
 .nav-list li:first-child {
     color: #fff;
     text-transform: uppercase;
-    font-family: serif;
+    font-family: luxia;
     font-size: 25px;
 }
 
@@ -130,8 +139,12 @@ body {
 /* ----> Logo para mobile <---- */
 .navLogo {
     display: none;
+    font-family: 'luxia';
 }
   
+.navLogo h1 {
+    font-family: 'luxia';
+}
 /* ----->FIM DO MENU HAMBURGUER<----- */
 
 /* ----> HOME <---- */
@@ -152,6 +165,7 @@ body {
     font-size: 42px;
     color: #fff;
     text-transform: uppercase;
+    font-family: 'luxia';
 }
 
 /* v alaranjado da home */
@@ -516,4 +530,21 @@ footer {
         max-width: 800px;
         text-align: center;
     }
+}
+
+.nossos-servicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #FFF;
+    color: #000;
+}
+
+.nossos-servicos_imagem {
+    background-image: url(../img_carrossel/copeiro.jpeg);
+    background-size: cover;
+    width: 80%;
+    height: 80%;
 }

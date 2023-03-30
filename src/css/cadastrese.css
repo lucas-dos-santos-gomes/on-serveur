@@ -59,7 +59,7 @@ body {
     width: 38vw;
     height: 90vh;
     background-image: url(../img/bgforms.svg);
-    background-size: contain;
+    background-size: cover;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;         
