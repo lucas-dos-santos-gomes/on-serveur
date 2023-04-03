@@ -355,19 +355,20 @@ footer {
 }
 
 .boxFooter {
-    width: 30%;
+    width: 50%;
     height: 250px;
 }
 
 .boxFooter ul {
     list-style: none;
+    overflow: hidden;
 }
 
 .boxFooter ul li {
     width: min-content;
     text-align: center;
     margin: 30px auto;
-    transition: 0.25s ease-in-out;
+    transition: 0.25s transform ease-in-out;
 }
 
 .boxFooter ul li:hover {
@@ -504,4 +505,20 @@ footer {
     #waiterImg{
         display: none; 
     } 
+}
+
+@media screen and (max-width: 358px) {
+    .containerFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+    .boxFooter {
+        height: auto;
+    }
+    .boxFooter ul li {
+        margin-bottom: 0;
+    }
+    .boxFooter:last-child {
+        margin-bottom: 30px;
+    }
 }
