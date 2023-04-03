@@ -81,6 +81,7 @@
     font-family: var(--fonte);
     font-size: large;
     margin: 20px 0 10px 0;
+    cursor: pointer;
 }
 /*btn já tem uma conta*/
 .btn1:hover, a:hover{
