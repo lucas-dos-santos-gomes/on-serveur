@@ -29,17 +29,15 @@ body {
 .box {
     display: flex;
     flex-direction: row;
-    width: 90vw;
-    height: 90vh;
+    width: 100%;
+    height: 100%;
     background: #fff;
-    box-shadow: #000 5px 5px 10px;
-    
-
+    /*box-shadow: #000 5px 5px 10px;*/
 }
 /*imagem de background do form*/
 .bgimg{
-    width: 54vw;
-    height: 90vh;
+    width: 60%;
+    height: 100%;
     background-image: url(../img/bgimgcad.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -56,8 +54,8 @@ body {
 /*seção formularío*/
 .secform{
     display: flex;
-    width: 38vw;
-    height: 90vh;
+    width: 40%;
+    height: 100%;
     background-image: url(../img/bgforms.svg);
     background-size: cover;
     flex-wrap: nowrap;
@@ -92,6 +90,7 @@ body {
     font-family: var(--fonte);
     font-size: large;
     margin: 20px 0 10px 0;
+    cursor: pointer;
 }
 /*btn já tem uma conta*/
 .btn1:hover, a:hover{
