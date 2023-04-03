@@ -286,15 +286,17 @@ button {
 
 /* ---->INÍCIO SOBRE NÓS<---- */
 .aboutUs {
-    height: 450px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    height: 450px;
+    padding: 40px 50px;
+    box-sizing: border-box;
 }
 
 /* texto sobre nos */
 .aboutUsTitle {
     font-size: 55px;
+    margin-bottom: 20px;
     color: #fff;
     text-transform: uppercase;
     font-family: var(--fonte);
@@ -302,11 +304,9 @@ button {
 
 /* descrição da area sobre nos */ 
 .aboutUsDesc {
-    display: flex;
-    align-items: left;
-    justify-content: left;
     color: #fff;
     font-size: 35px;
+    line-height: 50px;
     max-width: 500px;
     font-family: var(--fonte);
 }
@@ -442,28 +442,16 @@ footer {
         justify-content: space-evenly;
         margin: 40px 0 0 0;
     }
+    .aboutUs {
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 30px 50px 40px 50px;
+    }
     #waiterImg{
         display: none; 
     }
 }
-    .aboutUs {
-        margin-left: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .aboutUsTitle {
-        display: block;
-        margin-left: 0;
-        text-align: center;
-    }
-    
-    .aboutUsDesc {
-        display: block;
-        margin: 30px auto 0 auto;
-        max-width: auto;
-        text-align: center;
-    }
 
 @media only screen and (max-width: 550px) {
     .homeTitle {
@@ -478,10 +466,6 @@ footer {
 
     #first {
         margin: 0 20px 0 0;
-    }
-
-    .aboutUs {
-        height: 500px;
     }
 
     .aboutUsTitle {
@@ -505,6 +489,12 @@ footer {
     #waiterImg{
         display: none; 
     } 
+}
+
+@media screen and (max-width: 590px) {
+    .aboutUs {
+        padding: 30px 20px 50px;
+    }
 }
 
 @media screen and (max-width: 358px) {
