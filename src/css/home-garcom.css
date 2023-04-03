@@ -145,6 +145,7 @@ body {
     background-image: url(../img/home-img.png);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 /* logo */
@@ -594,15 +595,16 @@ footer{
         width: 80%;
         margin: auto;
         text-align: center;
-        font-size: 60px;
+        font-size: 40px;
         margin-top: 150px;
     }
     
     .homeDesc {
         width: 80%;
         margin: auto;
+        margin-top: 20px;
         text-align: center;
-        font-size: 32px;
+        font-size: 30px;
     }
     
     a input {
@@ -691,11 +693,11 @@ footer{
 
 @media only screen and (max-width: 550px) {
     .homeTitle {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .homeDesc {
-        font-size: 28px;
+        font-size: 25px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
