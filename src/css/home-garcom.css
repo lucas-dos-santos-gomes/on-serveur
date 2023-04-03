@@ -12,6 +12,20 @@
     overflow-x: hidden;
 }
 
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #000000;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #421C29;
+    border-radius: 20px;
+    border: 3px solid #421C29;
+}
+
 :root {
     --corDeFundo: #5A071F;
     --fonte: 'Alata', sans-serif;
