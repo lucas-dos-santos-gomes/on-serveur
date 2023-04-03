@@ -92,8 +92,8 @@ form{
     background: url('../img/inputUsuario.png') no-repeat;
     background-size: cover;
 }
-form button{
-    padding: 5px 10px;
+form a{
+    width: 60px;
     border-radius: 50px;
     background-color: transparent;
     color: white;
@@ -101,18 +101,18 @@ form button{
     font-size: 15px;
     margin-top: 20px;
     transition: .6s ease;
-    padding-left: 40px;
-    height: 40px;
+    padding: 10px 5px 10px 40px;
+    height: auto;
     cursor: pointer;
     background: url('../img/iconeEntrar.png') no-repeat;
     background-size: contain;
 }
-form button:hover{
+form a:hover{
     background-color: #890019;
     color: #fff;
     border-color: #890019;
 }
-input:focus, form button:focus{
+input:focus, form a:focus{
     border: 1px solid #fff;
     box-shadow: 0;
     outline: 0;
