@@ -364,19 +364,21 @@ footer {
 }
 
 .boxFooter ul li {
-    margin: 30px 0;
+    width: min-content;
+    text-align: center;
+    margin: 30px auto;
+    transition: 0.25s ease-in-out;
+}
+
+.boxFooter ul li:hover {
+    transform: scale(1.1);
+    transition: 0.25s ease-in-out;
+    color: #ccc;
 }
 
 .boxFooter ul li a {
     font-size: 25px;
     text-decoration: none;
-    transition: .25s ease-in-out;
-}
-
-.boxFooter ul li a:hover {
-    font-size: 27px;
-    transition: .25s ease-in-out;
-    color: #ccc;
 }
 
 .line100Footer {
