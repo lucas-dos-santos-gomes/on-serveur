@@ -221,6 +221,7 @@ button {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 150px;
 }
 #first{
     margin-right: 20px;
