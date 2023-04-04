@@ -216,6 +216,7 @@ html {
    font-size: 4rem;
    text-align: center;
    margin: 40px 0 50px;
+   padding: 1px 0;
 }
 
 .contratar_lista {
@@ -281,7 +282,7 @@ html {
 
 @media screen and (max-width: 700px) {
    .contratar_lista {
-      grid-template-columns: 300px;
+      grid-template-columns: auto;
       width: 300px;
    }
 }
@@ -289,6 +290,12 @@ html {
 @media screen and (max-width: 402px) {
    .contratar h1 {
       font-size: 3rem;
+   }
+}
+
+@media screen and (max-width: 370px) {
+   .contratar_lista {
+      width: 100%;
    }
 }
 
