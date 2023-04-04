@@ -114,9 +114,12 @@ html {
 
 .promover-evento {
    display: flex;
-   justify-items: center;
+   justify-content: end;
    background-image: url(../img/bg-evento.png);
    background-size: cover;
+   background-position-x: right;
+   padding: 0 3%;
+   box-sizing: border-box;
    width: 80%;
    height: 80%;
 }
@@ -124,10 +127,10 @@ html {
 .promover-evento_conteudo {
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: space-around;
    width: 25vw;
    height: 100%;
-   padding: 50px 20px;
+   padding: 20px 20px;
    box-sizing: border-box;
    text-align: center;
    color: var(--corDeFundo);
@@ -135,24 +138,25 @@ html {
 }
 
 .promover-evento_conteudo h2 {
-   font-size: 30px;
-   margin-bottom: 30px;
+   font-size: 3rem;
+   margin-bottom: 0;
 }
 
 .promover-evento_conteudo p:not(.botao-promover) {
-   font-size: 25px;
+   font-size: 2.5rem;
 }
 
 .botao-promover {
    display: inline-block;
-   width: 80px;
+   width: 100px;
    padding: 10px;
    text-align: center;
+   font-size: 2rem;
    border: 2px solid var(--corBotao);
    border-radius: 20px;
    background-color: var(--corBotao);
    color: #FFF;
-   margin: auto;
+   margin: 0 auto;
    cursor: pointer;
    transition: 200ms;
 }
@@ -161,6 +165,44 @@ html {
    transform: scale(1.1);
    background-color: #FFF;
    color: var(--corDeFundo);
+}
+
+@media screen and (min-width: 1300px) {
+   .promover-evento_conteudo {
+      justify-content: space-around;
+      padding: 70px 20px;
+   }
+   .promover-evento_conteudo h2 {
+      margin-bottom: 0;
+   }
+   .botao-promover {
+      margin: 0 auto;
+   }
+}
+
+@media screen and (max-width: 990px) {
+   .promover-evento {
+      padding: 0 50px;
+   }
+   .promover-evento_conteudo {
+      width: auto;
+      color: #000;
+   }
+   .promover-evento_conteudo h2 {
+      text-decoration: underline;
+   }
+   .promover-evento_conteudo p {
+      font-weight: bold;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .promover-evento {
+      background-image: none;
+      background-color: #FFF;
+      width: 90%;
+      padding: 0 20px;
+   }
 }
 
 .contratar {
