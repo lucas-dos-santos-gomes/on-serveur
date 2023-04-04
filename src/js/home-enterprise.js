@@ -68,3 +68,35 @@ for(let i = (funcionarios.length - 1); i >= 0; i--) {
 
    listaContratar.appendChild(li);
 }
+
+/* ********************************************** */
+let itensLista = document.querySelectorAll("li");
+let scroll = 0;
+function fazendoScroll() {
+   if(window.innerWidth > 700) {
+      return;
+   }
+   scroll += 300;
+   if(scroll > 1500) {
+      scroll = 0;
+   }
+   listaContratar.scroll(scroll,0);
+}
+let interval = window.setInterval(fazendoScroll, 5000);
+
+function cancelaIntervalo() {
+   window.clearInterval(interval);
+   interval = window.setInterval(fazendoScroll, 5000);
+}
+
+window.addEventListener("resize", cancelaIntervalo);
+itensLista.forEach(li => {
+   li.addEventListener("click", cancelaIntervalo);
+   li.addEventListener("keydown", cancelaIntervalo);
+   li.addEventListener("keyup", cancelaIntervalo);
+   li.addEventListener("focus", cancelaIntervalo);
+   li.addEventListener("drag", cancelaIntervalo);
+   li.addEventListener("touchstart", cancelaIntervalo);
+   li.addEventListener("touchmove", cancelaIntervalo);
+   li.addEventListener("touchend", cancelaIntervalo);
+});
