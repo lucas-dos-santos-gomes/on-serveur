@@ -19,15 +19,15 @@
    overflow-x: hidden;
 }
 
-*::-webkit-scrollbar {
+html::-webkit-scrollbar {
    width: 12px;
 }
  
-*::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
    background: #000000;
 }
- 
-*::-webkit-scrollbar-thumb {
+
+html::-webkit-scrollbar-thumb {
    background-color: #421C29;
    border-radius: 20px;
    border: 3px solid #421C29;
@@ -282,8 +282,26 @@ html {
 
 @media screen and (max-width: 700px) {
    .contratar_lista {
-      grid-template-columns: auto;
+      display: flex;
+      justify-content: flex-start;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
       width: 300px;
+   }
+
+   .contratar_lista::-webkit-scrollbar {
+      height: 12px;
+   }
+   
+   .contratar_lista::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 20px;
+      border: 3px solid #FFF
+   }
+
+   .contratar_lista li {
+      scroll-snap-align: start;
+      min-width: 300px;
    }
 }
 
@@ -296,6 +314,15 @@ html {
 @media screen and (max-width: 370px) {
    .contratar_lista {
       width: 100%;
+   }
+   .contratar_lista li {
+      min-width: calc(100vw - 60px);
+   }
+}
+
+@media screen and (max-width: 250px) {
+   .contratar_lista li {
+      min-width: 190px;
    }
 }
 
