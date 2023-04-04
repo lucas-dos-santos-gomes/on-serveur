@@ -44,7 +44,7 @@ html {
    height: 100vh;
    padding: 10vh 8vw;
    box-sizing: border-box;
-   background-image: url(../img/bg-home.svg);
+   background-image: url(../img/bg-home.png);
    background-size: cover;
    background-position: center;
 }
@@ -113,23 +113,34 @@ html {
 }
 
 .promover-evento {
-   background-image: url(../img/bg-evento.svg);
+   display: flex;
+   justify-items: center;
+   background-image: url(../img/bg-evento.png);
    background-size: cover;
    width: 80%;
    height: 80%;
 }
 
 .promover-evento_conteudo {
-   display: flex;;
+   display: flex;
    flex-direction: column;
    justify-content: space-between;
-   float: right;
    width: 25vw;
-   height: 78%;
+   height: 100%;
    padding: 50px 20px;
+   box-sizing: border-box;
    text-align: center;
    color: var(--corDeFundo);
    font-family: var(--fonte);
+}
+
+.promover-evento_conteudo h2 {
+   font-size: 30px;
+   margin-bottom: 30px;
+}
+
+.promover-evento_conteudo p:not(.botao-promover) {
+   font-size: 25px;
 }
 
 .botao-promover {
@@ -150,15 +161,6 @@ html {
    transform: scale(1.1);
    background-color: #FFF;
    color: var(--corDeFundo);
-}
-
-.promover-evento_conteudo h2 {
-   font-size: 30px;
-   margin-bottom: 30px;
-}
-
-.promover-evento_conteudo p:not(.botao-promover) {
-   font-size: 25px;
 }
 
 .contratar {
