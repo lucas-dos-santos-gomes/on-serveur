@@ -31,6 +31,10 @@
     --fonte: 'Alata', sans-serif;
 }
 
+html {
+    min-width: 250px;
+}
+
 body {
     background-color: #fff;
 }
