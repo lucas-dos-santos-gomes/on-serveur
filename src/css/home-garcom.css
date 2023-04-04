@@ -580,6 +580,7 @@ footer{
     color: #fff;
     font-size: 20px;
     font-family: alata;
+    text-decoration: none;
     transition: 200ms transform;
 }
 
