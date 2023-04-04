@@ -213,14 +213,15 @@ html {
 }
 
 .contratar h1 {
-   font-size: 40px;
+   font-size: 4rem;
    text-align: center;
    margin: 40px 0 50px;
 }
 
 .contratar_lista {
    display: grid;
-   grid-template-columns: auto auto auto;
+   grid-template-columns: 300px 300px 300px;
+   justify-content: center;
    gap: 30px;
    max-width: 1000px;
    margin: 0 auto 50px;
@@ -234,7 +235,7 @@ html {
    height: 400px;
    padding: 30px 30px 0;
    box-sizing: border-box;
-   background-color: #D9D9D9;
+   background-color: #CCC;
    list-style: none;
 }
 
@@ -245,13 +246,19 @@ html {
    height: 100px;
 }
 
+.contratar_lista li p {
+   font-size: 18px;
+   padding: 1px;
+}
+
 .contratar_lista li h4 {
-   font-size: 22px;
+   font-size: 25px;
    margin: 30px 0 70px;
 }
 
 .contratar_lista li .botao-contratar {
    font-size: 20px;
+   font-weight: bold;
    padding: 10px 20px;
    border: 3px solid var(--corDeFundo);
    border-radius: 15px;
@@ -267,21 +274,21 @@ html {
 
 @media screen and (max-width: 1040px) {
    .contratar_lista {
-      grid-template-columns: auto auto;
+      grid-template-columns: 300px 300px;
       max-width: 700px;
    }
 }
 
 @media screen and (max-width: 700px) {
    .contratar_lista {
-      grid-template-columns: auto;
+      grid-template-columns: 300px;
       width: 300px;
    }
 }
 
 @media screen and (max-width: 402px) {
    .contratar h1 {
-      font-size: 30px;
+      font-size: 3rem;
    }
 }
 
@@ -296,7 +303,7 @@ footer{
    align-items: center;
    justify-content: center;
    width: 25%;
-   font-size: 50px;
+   font-size: 5rem;
    font-family: luxia;
    font-weight: 400;
    color: #fff;
@@ -311,7 +318,7 @@ footer{
 
 #links_footer a{
    color: #fff;
-   font-size: 20px;
+   font-size: 2rem;
    font-family: alata;
    text-decoration: none;
    transition: 200ms transform;
@@ -334,7 +341,7 @@ footer{
    border-color: navajowhite;
    border-radius: 20px;
    font-family: alata;
-   font-size: 18px;
+   font-size: 1.8rem;
    background-color: #D9D9D9;
    color: #8A8989;
    cursor: pointer;
